@@ -1,0 +1,48 @@
+img {
+  width: 1200px;
+  height: 600px;
+}
+
+p,
+h1 {
+  text-align: center;
+}
+
+#fact {
+  color: rgb(99, 192, 236);
+}
+.norms {
+  color: rgb(173, 15, 15);
+}
+
+.norms2 {
+  color: blueviolet;
+}
+
+ul li {
+  list-style: none;
+  position: relative;
+}
+/*
+p:first-child i {
+  background: rgb(173, 15, 15);
+}*/
+p i:first-child {
+  background-color: rgb(99, 192, 236);
+}
+
+/* pseudo class
+p:hover {
+  color: cadetblue;
+}*/
+
+/* Span */
+span {
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+ul p {
+  text-align: start;
+}

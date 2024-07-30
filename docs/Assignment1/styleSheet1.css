@@ -65,6 +65,9 @@ body {
 }
 
 /*Footer*/
+footer {
+  margin-top: 50px;
+}
 footer a:link,
 footer a:visited {
   color: #437fc7;
@@ -85,6 +88,7 @@ footer a:hover {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
 .img-corner {
   border-radius: 10px;
 }
@@ -112,6 +116,16 @@ footer a:hover {
   box-shadow: 0px 4px 20px rgba(67, 127, 199, 0.9);
 }
 
+.homePage {
+  width: 80%;
+  margin-bottom: 200px;
+}
+main .images {
+  text-align: center;
+}
+.images {
+  width: 100%;
+}
 /* About me Page*/
 
 .skills h4 {
@@ -242,7 +256,7 @@ footer a:hover {
     align-items: center;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 453px) {
   .card-packs {
     flex-direction: column;
     align-items: center;
@@ -250,13 +264,27 @@ footer a:hover {
   .card {
     width: 80%;
     height: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
 }
 
+@media (max-width: 992px) {
+  #resume {
+    width: 80%;
+    margin-left: 60px;
+  }
+  .AboutMePage .about-me-texts {
+    width: 100%;
+  }
+
+  .form-part {
+    display: flex;
+    flex-direction: column;
+  }
+}
 /* icons*/
 .social-icons a i {
   font-size: 35px;

@@ -384,10 +384,11 @@ main .images {
   }
   .img1 {
     width: 80%;
+    height: inherit;
   }
   .img2 {
     width: 80%;
-    height: 80%;
+    height: inherit;
   }
 }
 /* icons*/

@@ -18,11 +18,14 @@ mode_button.style.height = "35px";
 mode_button.classList.add("mode");
 mode_button.style.display = "flex";
 mode_button.style.alignItems = "center";
-icon.classList.add("fa-solid", localStorage.getItem("themeclass"));
+
+if (localStorage.getItem("themeclass") == null) {
+  localStorage.setItem("themeclass", "fa-sun");
+}
 //make sure for consistent theme accross pages
 document.addEventListener("DOMContentLoaded", () => {
   icon.classList.add("fa-solid", localStorage.getItem("themeclass"));
-  theme_change();
+
   if (icon.classList.contains("fa-sun")) {
     mode_button.style.paddingRight = "5px";
     mode_button.style.paddingLeft = "5px";
@@ -30,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mode_button.style.paddingRight = "5px";
     mode_button.style.paddingLeft = "30px";
   }
+  theme_change();
 });
 
 // chainging the icons when click

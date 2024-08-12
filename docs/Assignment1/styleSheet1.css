@@ -166,18 +166,20 @@ footer a:hover {
 main .images {
   text-align: center;
 }
-
+.img-container {
+  height: fit-content;
+}
 .images {
   width: 100%;
 }
 .img1 {
   width: 100%;
-  height: 80%;
+  height: inherit;
 }
 
 .img2 {
-  width: 100%;
-  height: 100%;
+  width: inherit;
+  height: auto;
 }
 /* About me Page*/
 

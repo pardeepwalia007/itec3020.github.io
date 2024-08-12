@@ -18,7 +18,7 @@ mode_button.style.height = "35px";
 mode_button.classList.add("mode");
 mode_button.style.display = "flex";
 mode_button.style.alignItems = "center";
-
+icon.classList.add("fa-solid", localStorage.getItem("themeclass"));
 //make sure for consistent theme accross pages
 document.addEventListener("DOMContentLoaded", () => {
   icon.classList.add("fa-solid", localStorage.getItem("themeclass"));

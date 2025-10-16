@@ -12,7 +12,7 @@
     />
 
     <!--external css-->
-    <link rel="stylesheet" href="Assignment1\styleSheet1.css" />
+    <link rel="stylesheet" href="Assignment1/styleSheet1.css" />
     <!-- Icons-->
     <script
       src="https://kit.fontawesome.com/af3d5f6053.js"
@@ -32,14 +32,14 @@
     <div class="intro container-lg pt-5">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a href="#" class="navbar-brand fs-3" id="logo-name"
-            >Pardeep<span>Walia</span></a
+          <a href="#" class="logoname-light navbar-brand fs-3" id="logo-name"
+            >Pardeep<span class="logo-surname">Walia</span></a
           >
           <div class="navbar-nav gap-5 fs-5">
-            <a href="index.html" class="link">Home Page</a>
-            <a href="aboutme.html" class="link">About Me</a>
-            <a href="blog.html" class="link">Blog Page</a>
-            <a href="contact.html" class="link">Contact page</a>
+            <a href="index.html" class="link light_theme">Home Page</a>
+            <a href="aboutme.html" class="link light_theme">About Me</a>
+            <a href="blog.html" class="link light_theme">Blog Page</a>
+            <a hidden href="contact.html" class="link light_theme">Contact page</a>
           </div>
         </div>
       </nav>
@@ -81,9 +81,9 @@
       </div>
     </div>
     <!--Footer container-->
-    <div class="pt-5 pb-5 mt-5 text-center footer">
+     <div class="pt-5 pb-5 mt-5 text-center footer">
       <footer>
-        <div class="social-icons mb-3">
+          <div class="social-icons mb-3">
           <a href="https://github.com/pardeepwalia007/itec3020.github.io"
             ><i class="fa-brands fa-github"></i
           ></a>
@@ -92,8 +92,12 @@
           ></a>
           <a href="#"> <i class="fa-solid fa-envelope"></i></a>
         </div>
-        <p>&copy; 2024 PW. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> PW. All rights reserved.</p>
       </footer>
     </div>
+    <script src="./script.js"></script>
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

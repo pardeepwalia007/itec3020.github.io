@@ -12,7 +12,7 @@
     />
 
     <!--external css-->
-    <link rel="stylesheet" href="Assignment1\styleSheet1.css" />
+    <link rel="stylesheet" href="Assignment1/styleSheet1.css" />
     <!-- Icons-->
     <script
       src="https://kit.fontawesome.com/af3d5f6053.js"
@@ -32,15 +32,15 @@
     <div class="intro container-lg pt-5">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a href="#" class="navbar-brand fs-3" id="logo-name"
-            >Pardeep<span>Walia</span></a
+          <a href="#" class="logoname-light navbar-brand fs-3" id="logo-name"
+            >Pardeep<span class="logo-surname">Walia</span></a
           >
 
           <div class="navbar-nav gap-5 fs-5">
-            <a href="index.html" class="link">Home Page</a>
-            <a href="blog.html" class="link">Blog Page</a>
-            <a href="contact.html" class="link">Contact page</a>
-            <a href="projects.html" class="link"> Projects</a>
+            <a href="index.html" class="link light_theme">Home Page</a>
+            <a href="blog.html" class="link light_theme">Blog Page</a>
+            <a hidden href="contact.html" class="link light_theme">Contact page</a>
+            <a href="projects.html" class="link light_theme"> Projects</a>
           </div>
         </div>
       </nav>
@@ -55,28 +55,20 @@
             A little Background about me!
           </h3>
           <p style="font-size: 20px">
-            With a strong passion for technology and
-            <span>problem-solving</span>, I'm aspiring to build a career as a
-            <span style="color: #437fc7"
-              >software engineer, developer, data scientist, or AI/ML
-              engineer</span
-            >. Throughout my academic journey, I've been honing my skills in
-            <span style="color: #437fc7"
-              >Data Structures and Algorithms (DSA)</span
-            >, which has been instrumental in strengthening my problem-solving
-            abilities. I'm also currently engaged in a
-            <span style="color: #437fc7">Data Analytics project</span>, applying
-            theoretical knowledge to real-world scenarios and gaining valuable
-            hands-on experience. Feel free to explore my portfolio to learn more
-            about my projects, skills, and aspirations. I'm excited to connect
-            with like-minded professionals and explore opportunities where I can
-            contribute, grow, and make an impact in the tech industry.
+            With a strong passion for technology and <span>problem-solving</span>, I'm currently
+            focused on building a career as a <span style="color: #437fc7">data analyst, data engineer, or cloud data professional</span>.
+            Having recently completed my Honours degree in Information Technology from York University,
+            I’ve been deepening my expertise in <span style="color: #437fc7">SQL, Python, and Tableau</span> through real-world projects,
+            while mastering <span style="color: #437fc7">Azure, dbt, Databricks, and AWS</span> to build scalable and efficient data systems.
+            My journey also includes strong foundations in <span style="color: #437fc7">Data Structures and Algorithms (DSA)</span>,
+            which sharpen my logical and analytical thinking. Feel free to explore my portfolio to see how I transform data into insights
+            and design end-to-end analytical solutions that create impact. I'm always eager to connect, learn, and grow within the evolving tech landscape.
           </p>
         </div>
         <!-- Resume container within the main  container-->
-        <div id="resume" class="ps-5 pe-0 col-lg-7 col-md-6 text-center">
+        <div id="resume" class="ps-5 col-lg-7 col-md-6 text-center">
           <iframe
-            src="WaliaPardeepResume - york university.pdf"
+            src="Resume.pdf"
             id="resueme-page"
             frameborder="0"
             style="width: 100%; height: 500px"
@@ -84,16 +76,20 @@
           </iframe>
           <div class="resume-button text-white">
             <a
-              href="WaliaPardeepResume - york university.pdf"
-              download="WaliaPardeepResume - york university.pdf"
-              >Download Resume</a
-            >
+              id="download_button"
+              href="Resume.pdf"
+              download="Resume.pdf"
+              >Download Resume</a>
           </div>
         </div>
       </div>
       <!-- Skills section-->
       <div class="skills mt-5">
-        <h4 style="text-align: center; margin-bottom: 50px; font-size: 50px" ;>
+        <h4
+          id="skill-section"
+          style="text-align: center; margin-bottom: 50px; font-size: 50px"
+          ;
+        >
           Skills
         </h4>
         <!-- Container for all the skills -->
@@ -128,13 +124,24 @@
               </ul>
             </div>
           </div>
+          <div class="list col">
+            <h5 style="text-align: center">Cloud Technology</h5>
+            <div class="in-list">
+              <ul class="skill-list"
+                  <li> <i class="fa-solid fa-cloud"></i>Microsoft Azure</li>
+                <li><i class="fa-solid fa-database"></i>dbt (Data Build Tool)</li>
+                <li><i class="fa-solid fa-fire"></i>Databricks</li>
+                <li><i class="fa-brands fa-aws"></i>AWS</li>
+              </ul>
+              </div>
+          </div>
         </div>
       </div>
     </div>
     <!--Footer container-->
-    <div class="pt-5 pb-5 mt-5 text-center footer">
+     <div class="pt-5 pb-5 mt-5 text-center footer">
       <footer>
-        <div class="social-icons mb-3">
+          <div class="social-icons mb-3">
           <a href="https://github.com/pardeepwalia007/itec3020.github.io"
             ><i class="fa-brands fa-github"></i
           ></a>
@@ -143,8 +150,12 @@
           ></a>
           <a href="#"> <i class="fa-solid fa-envelope"></i></a>
         </div>
-        <p>&copy; 2024 PW. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> PW. All rights reserved.</p>
       </footer>
     </div>
+    <script src="./script.js"></script>
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

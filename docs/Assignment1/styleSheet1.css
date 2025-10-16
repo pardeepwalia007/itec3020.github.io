@@ -29,9 +29,15 @@ body {
   align-content: center;
   text-decoration: none;
   color: #437fc7;
-  background-color: #fdfcdc;
+  /* background-color: #fdfcdc; */
 }
-.link:hover {
+/* text color for dark theme */
+.link_dark:link,
+.link_dark:visited {
+  color: #b9cfea;
+}
+/* light theme hover */
+.light_theme:hover {
   border-radius: 5px;
   color: #fdfcdc;
   background-color: #437fc7;
@@ -39,21 +45,42 @@ body {
   padding-left: 3px;
   padding-right: 3px;
 }
+/* dark theme hover */
+.dark_theme:hover {
+  color: #2e2d1f;
+  background-color: #b9cfea;
+}
 
 /*Navigation*/
 #logo-name {
   font-family: "Playwrite AU SA", cursive;
   font-weight: 800;
-  color: #437fc7;
   display: inline-block;
 }
-#logo-name span {
+#dark-logo-name {
+  font-family: "Playwrite AU SA", cursive;
+  font-weight: 800;
+  display: inline-block;
+}
+.logoname-light {
+  color: #437fc7;
+}
+.logoname-dark {
+  color: #b9cfea;
+}
+
+.logo-surname {
   background-color: #437fc7;
   color: #fdfcdc;
   border-radius: 5px;
   padding-left: 3px;
   padding-right: 3px;
   font-size: 27px;
+}
+/* dark mode */
+.dark-logo-name {
+  background-color: #b9cfea;
+  color: #2e2d1f;
 }
 #logo-name:hover {
   border-radius: 5px;
@@ -63,12 +90,31 @@ body {
   padding-left: 3px;
   padding-right: 3px;
 }
-
+#dark-logo-name:hover {
+  border-radius: 5px;
+  background-color: #b9cfea;
+  color: #2e2d1f;
+  transition: color 0.3s, background-color, 0.3s;
+  padding-left: 3px;
+  padding-right: 3px;
+}
 /*Footer*/
+footer {
+  margin-top: 50px;
+}
 footer a:link,
 footer a:visited {
   color: #437fc7;
-  background-color: #fdfcdc;
+  /* background-color: #fdfcdc; */
+}
+/* dark theme */
+.footer-dark a:link,
+.footer-dark a:visited {
+  color: #b9cfea;
+}
+.footer-dark a:hover {
+  color: #2e2d1f;
+  background-color: #b9cfea;
 }
 footer a:hover {
   color: #fdfcdc;
@@ -85,6 +131,7 @@ footer a:hover {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
 .img-corner {
   border-radius: 10px;
 }
@@ -112,12 +159,39 @@ footer a:hover {
   box-shadow: 0px 4px 20px rgba(67, 127, 199, 0.9);
 }
 
+.homePage {
+  width: 80%;
+  margin-bottom: 200px;
+}
+main .images {
+  text-align: center;
+}
+.img-container {
+  height: fit-content;
+}
+.images {
+  width: 100%;
+}
+.img1 {
+  width: 100%;
+  height: inherit;
+}
+
+.img2 {
+  width: inherit;
+  height: auto;
+}
 /* About me Page*/
 
 .skills h4 {
   background-color: #437fc7;
   color: #fdfcdc;
   border-radius: 10px;
+}
+/* skills dark theme */
+.skills_dark h4 {
+  background-color: #b9cfea;
+  color: #2e2d1f;
 }
 .resume-button {
   display: inline-block;
@@ -130,11 +204,18 @@ footer a:hover {
   background-color: #437fc7;
   margin-top: 30px;
 }
+
 .resume-button a {
   color: #fdfcdc;
   text-decoration: none;
 }
-
+/* resueme button dark theme */
+.resume-button-dark {
+  background-color: #b9cfea;
+}
+.resume-button-dark a {
+  color: #2e2d1f;
+}
 #resueme-page {
   border-radius: 10px;
   box-shadow: 0px 4px 20px rgba(67, 127, 199, 0.9);
@@ -187,11 +268,18 @@ footer a:hover {
   border-radius: 5px;
   color: #fdfcdc;
 }
+/* dark mode */
+.part-group-dark label {
+  color: #2e2d1f;
+  background-color: #b9cfea;
+}
+
 .text-field {
   width: 100%;
   height: 80px;
   border: 1px solid #437fc7;
   border-radius: 5px;
+  background-color: #fdfcdc;
 }
 #submit-button {
   text-align: center;
@@ -203,7 +291,17 @@ footer a:hover {
   color: #fdfcdc;
   font-size: 25px;
 }
-
+/* dark submit button */
+#submit-button-dark {
+  text-align: center;
+  border-radius: 4px;
+  border: 0px;
+  padding: 10px;
+  margin-top: 8px;
+  background-color: #b9cfea;
+  color: #2e2d1f;
+  font-size: 25px;
+}
 /* Project Page*/
 .card {
   width: 400px;
@@ -212,8 +310,8 @@ footer a:hover {
   border: none;
   box-shadow: -10px 4px 20px rgba(67, 127, 199, 0.7);
 
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 19px;
+  border-top-right-radius: 19px;
 }
 .card img {
   width: 100%;
@@ -226,7 +324,7 @@ footer a:hover {
 .card-body {
   background-color: #fdfcdc;
   font-size: 20px;
-
+  margin-top: -1px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -242,7 +340,7 @@ footer a:hover {
     align-items: center;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 453px) {
   .card-packs {
     flex-direction: column;
     align-items: center;
@@ -250,13 +348,36 @@ footer a:hover {
   .card {
     width: 80%;
     height: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
+  /* .images img {
+    width: 100px;
+    height: 100px;
+  } */
 }
 
+@media (max-width: 992px) {
+  #resume {
+    width: 80%;
+    margin-left: 60px;
+  }
+  .AboutMePage .about-me-texts {
+    width: 100%;
+  }
+
+  .form-part {
+    display: flex;
+    flex-direction: column;
+  }
+  .img-container {
+    width: 100%;
+  }
+}
+@media (max-width: 580px) {
+}
 /* icons*/
 .social-icons a i {
   font-size: 35px;
@@ -266,4 +387,29 @@ footer a:hover {
   display: flex;
   gap: 40px;
   justify-content: center;
+}
+
+/* blog page */
+.blog-title {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+}
+.blog-text {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+}
+.blog {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+@media (max-width: 1000px) {
+  .blog {
+    width: 100%;
+    height: 100%;
+  }
 }

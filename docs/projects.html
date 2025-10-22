@@ -48,36 +48,102 @@
     <div class="projectPage container-lg margins">
       <h1>Projects</h1>
       <!--sub container card-packs, consist of multiple cards-->
-      <div class="card-packs">
-        <div class="card">
-          <img
-            class="card-img"
-            src="Neural-Networks-Cover-Photo.png"
-            alt="Neural-Networks-Cover-Photo"
-          />
+      <div class="card-packs" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+            <div class="card blog2">
+              
+                <div class='card-img tableauPlaceholder' id='viz1761097479942' style='position: relative; width:90%; height: 100%;'><noscript><a href='#'><img alt='The Data Job Market: Pay Scales and Top Skills  ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataJob_analysis_5&#47;DataRolesSkillandPay&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='width:100%; height:100%;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='DataJob_analysis_5&#47;DataRolesSkillandPay' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;DataJob_analysis_5&#47;DataRolesSkillandPay&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object>
+                </div>
+                       
+              <script type='text/javascript'>                    
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                var divElement = document.getElementById('viz1761097479942');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              </script>
+              <div class="card-body">
+                <h5 class="card-title mb-2">The Data Job Market — Skills &amp; Pay Dashboard</h5>
+                <p class="card-text">
+                  I built an end‑to‑end analysis of Tech hiring landscape, unifying postings from multiple sources into a single, interactive Tableau view. The workflow covers
+                  <span style="color: #437fc7">web scraping</span> (LinkedIn with <span style="color: #437fc7">Selenium</span>) and the <span style="color: #437fc7">Adzuna API</span>, an
+                  <span style="color: #437fc7">ETL pipeline</span> into <span style="color: #437fc7">MySQL</span>/<span style="color: #437fc7">DuckDB</span>, and modeling with <span style="color: #437fc7">dbt</span> using a
+                  <span style="color: #437fc7">medallion architecture</span> (Bronze → Silver → Gold).
+                </p>
+                <ul class="mb-2">
+                  <li>Standardized <span style="color: #437fc7">salary normalization</span> (hourly/monthly → annual CAD) and robust <span style="color: #437fc7">deduplication</span>.</li>
+                  <li>Built a <span style="color: #437fc7">skill taxonomy</span> with <span style="color: #437fc7">regex</span> to tag tools (SQL, Python, Tableau, Azure, AWS, Databricks, dbt).</li>
+                  <li>Calculated KPIs: <span style="color: #437fc7">median salary</span> by role &amp; city, <span style="color: #437fc7">remote share</span>, and <span style="color: #437fc7">AI/Cloud mentions</span> trend.</li>
+                  <li>Published an interactive <span style="color: #437fc7">Tableau</span> dashboard with filters for role, location, seniority, and skills.</li>
+                </ul>
+                <p class="card-text">
+                  Result: a recruiter‑ready view of which roles pay best, which skills are in demand, and where opportunities cluster across Canada.
+                </p>
+                <h4>Learnings</h4>
+                <ul>
+                  <li>Developed an in-depth understanding of how job market data reflects skill demand and salary trends across tech roles.</li>
+                  <li>Enhanced proficiency in end-to-end data engineering — from scraping raw data to modeling and visualizing insights.</li>
+                  <li>Gained experience building automated ETL pipelines and modular transformations using dbt and DuckDB.</li>
+                  <li>Learned to design Tableau dashboards that blend technical accuracy with clear storytelling for decision-makers.</li>
+                  <li>Strengthened problem-solving through debugging data models, schema design, and metadata documentation.</li>
+                </ul>
+              </div>
+            </div>
+          
+          
+            <div class="card blog2">
+              <img
+                class="card-img"
+                src="1757097528460.jpeg"
+                alt="Image of code in Mac"
+              />
           <div class="card-body">
-            This Project was built to specify a Neural Network to identify
-            images.
+            <h5 class="card-title mb-2">Electric Vehicle Market Analysis — Tableau & Python</h5>
+            <p class="card-text">
+              This project analyzes the growth of <span style="color: #437fc7">Electric Vehicles (EVs)</span> versus <span style="color: #437fc7">Plug-in Hybrid Electric Vehicles (PHEVs)</span> using real-world sales and pricing data. The goal was to uncover adoption trends, price segments, and manufacturer competitiveness across global markets.
+            </p>
+            <ul class="mb-2">
+              <li>Cleaned and merged datasets in <span style="color: #437fc7">Python</span> using <span style="color: #437fc7">Pandas</span> for accurate <span style="color: #437fc7">KPI</span> computation.</li>
+              <li>Created interactive <span style="color: #437fc7">Tableau dashboards</span> highlighting <span style="color: #437fc7">EV vs PHEV market share</span>, <span style="color: #437fc7">MSRP distribution</span>, and <span style="color: #437fc7">YoY growth</span>.</li>
+              <li>Derived insights into how <span style="color: #437fc7">Tesla</span> compares against other manufacturers and identified regions with the fastest <span style="color: #437fc7">EV adoption rates</span>.</li>
+            </ul>
+            <h4>Learnings</h4>
+            <ul>
+              <li>Learned to structure a data analytics workflow combining Python preprocessing with Tableau visualization.</li>
+              <li>Strengthened understanding of KPI design and data storytelling for sustainability-driven industries.</li>
+              <li>Gained hands-on experience transforming messy datasets into clean, actionable insights.</li>
+              <li>Developed a deeper appreciation for the power of visual analytics in communicating environmental impact.</li>
+            </ul>
           </div>
-        </div>
-        <div class="card">
-          <img
-            class="card-img"
-            src="project-3.png"
-            alt="Image of code in Mac"
-          />
-          <div class="card-body">
-            This Project was built to specify a Neural Network to identify
-            images.
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img" src="project-2.png" alt="Data visuals " />
-          <div class="card-body">
-            This Project was built to specify a Neural Network to identify
-            images.
-          </div>
-        </div>
+            </div>
+          
+          
+            <div class="card blog2">
+              <img class="card-img" src="project-2.png" alt="Data visuals " />
+              <div class="card-body">
+                <h5 class="card-title mb-2"> (Currently Working on this!) Apple Retail Sales — dbt + DuckDB Medallion</h5>
+                <p class="card-text">
+                  I’m building a modern analytics stack with <span style="color: #437fc7">dbt</span> on <span style="color: #437fc7">DuckDB</span>, organized as a <span style="color: #437fc7">medallion architecture</span> (Bronze → Silver → Gold). Raw CSVs are staged via <span style="color: #437fc7">sources.yml</span>, cleaned into <span style="color: #437fc7">staging models</span> (naming: <code>stg_*</code>), and transformed to <span style="color: #437fc7">dim</span>/<span style="color: #437fc7">fact</span> tables for the final analytics layer.
+                </p>
+                <ul class="mb-2">
+                  <li>Data quality with <span style="color: #437fc7">tests</span> (<code>unique</code>, <code>not_null</code>, <code>accepted_values</code>) and <span style="color: #437fc7">source freshness</span>.</li>
+                  <li>Performance using <span style="color: #437fc7">incremental models</span> and <span style="color: #437fc7">surrogate keys</span> via macros.</li>
+                  <li>Metrics in Gold: <span style="color: #437fc7">Revenue</span>, <span style="color: #437fc7">Average Order Value (AOV)</span>, <span style="color: #437fc7">Units/Txn</span>, WoW/ MoM growth, and product- & city-level breakdowns.</li>
+                  <li>Documentation with <span style="color: #437fc7">dbt docs</span> (lineage graph) and <span style="color: #437fc7">exposures</span> for downstream dashboards.</li>
+                </ul>
+               <p class="card-text">
+                  Outcome: a repeatable, version-controlled pipeline that turns raw retail files into trustworthy, dashboard-ready tables.
+                </p>
+                <h4>Expected Learnings</h4>
+                <ul>
+                  <li>Mastering advanced dbt concepts such as incremental models, seeds, and reusable macros.</li>
+                  <li>Understanding medallion architecture at a deeper level by managing dependencies across layers.</li>
+                  <li>Improving data governance through tests, documentation, and exposure tracking.</li>
+                  <li>Learning to optimize performance and scalability of analytics workflows using DuckDB.</li>
+                  <li>Strengthening storytelling by connecting dbt outputs to visual dashboards in Tableau or Power BI.</li>
+                </ul>
+              </div>
+            </div>
+    
       </div>
     </div>
     <!--Footer container-->

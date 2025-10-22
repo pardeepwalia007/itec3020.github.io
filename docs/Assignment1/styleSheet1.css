@@ -202,7 +202,7 @@ main .images {
 }
 .resume-button {
   background-color: #437fc7;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .resume-button a {
@@ -361,7 +361,7 @@ main .images {
 
 @media (max-width: 992px) {
   #resume {
-    width: 80%;
+    width: 100%;
     margin-left: 60px;
   }
   .AboutMePage .about-me-texts {

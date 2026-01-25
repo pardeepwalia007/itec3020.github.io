@@ -3,6 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
+
     <!--Bootstrap-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -13,6 +14,7 @@
 
     <!--external css-->
     <link rel="stylesheet" href="Assignment1/styleSheet1.css" />
+
     <!-- Icons-->
     <script
       src="https://kit.fontawesome.com/af3d5f6053.js"
@@ -26,7 +28,29 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+AU+SA:wght@100..400&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Typing effect styles (small + safe) -->
+    <style>
+      .typing-caret::after {
+        content: "▍";
+        display: inline-block;
+        margin-left: 6px;
+        animation: blink 0.9s infinite;
+        transform: translateY(-1px);
+      }
+      @keyframes blink {
+        0%,
+        49% {
+          opacity: 1;
+        }
+        50%,
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
   </head>
+
   <body>
     <!--Navigation-->
     <div class="intro container-lg pt-5">
@@ -39,7 +63,9 @@
           <div class="navbar-nav gap-5 fs-5">
             <a href="index.html" class="link light_theme">Home Page</a>
             <a href="blog.html" class="link light_theme">Blog Page</a>
-            <a hidden href="contact.html" class="link light_theme">Contact page</a>
+            <a hidden href="contact.html" class="link light_theme"
+              >Contact page</a
+            >
             <a href="projects.html" class="link light_theme"> Projects</a>
           </div>
         </div>
@@ -51,21 +77,37 @@
       <div class="container-fluid row gap-5 mt-5">
         <!-- Texts and Background part-->
         <div class="about-me-texts center col-lg-4 col-md-9">
-          <h3 style="font-size: 50px; margin-bottom: 40px; margin-top: -40px">
-            A little Background about me!
-          </h3>
+          <!-- Typing effect target -->
+          <h3
+            id="about-title"
+            class="typing-caret"
+            style="font-size: 50px; margin-bottom: 40px; margin-top: -40px"
+          ></h3>
+
+          <!-- Original text stored here so HTML stays clean -->
+          <span id="about-title-text" hidden>A little Background about me!</span>
+
           <p style="font-size: 20px">
-            With a strong passion for technology and <span>problem-solving</span>, I'm currently
-            focused on building a career as a <span style="color: #437fc7">data analyst, data engineer, or cloud data professional</span>.
-            Having recently completed my Honours degree in Information Technology from York University,
-            I’ve been deepening my expertise in <span style="color: #437fc7">SQL, Python, and Tableau</span> through real-world projects,
-            while mastering <span style="color: #437fc7">Azure, dbt, Databricks, and AWS</span> to build scalable and efficient data systems.
-            My journey also includes strong foundations in <span style="color: #437fc7">Data Structures and Algorithms (DSA)</span>,
-            which sharpen my logical and analytical thinking. Feel free to explore my portfolio to see how I transform data into insights
-            and design end-to-end analytical solutions that create impact. I'm always eager to connect, learn, and grow within the evolving tech landscape.
+            With a strong passion for technology and <span>problem-solving</span>,
+            I’m focused on building a career at the intersection of
+            <span style="color: #437fc7">data, analytics, engineering, and AI-driven systems</span>.
+            Having completed my Honours degree in Information Technology from York University,
+            I’ve been deepening my expertise through real-world projects using
+            <span style="color: #437fc7">SQL, Python, Tableau, and analytics engineering</span>,
+            while working with modern data and cloud tools such as
+            <span style="color: #437fc7">DuckDB, noSQL Databricks, and AWS</span>
+            to build scalable, decision-ready data pipelines.
+            My recent work explores
+            <span style="color: #437fc7">agentic RAG workflows, hybrid retrieval + SQL reasoning, and evaluation frameworks</span>,
+            bridging data engineering with intelligent decision-making.
+            I also bring strong foundations in
+            <span style="color: #437fc7">Data Structures and Algorithms (DSA)</span>,
+            supporting robust analytical and system-level thinking.
+            Feel free to explore my portfolio to see how I design end-to-end data and AI solutions that create real impact.
           </p>
         </div>
-        <!-- Resume container within the main  container-->
+
+        <!-- Resume container within the main container-->
         <div id="resume" class="ps-5 col-lg-7 col-md-6 text-center">
           <iframe
             src="Resume.pdf"
@@ -75,89 +117,130 @@
           >
           </iframe>
           <div class="resume-button text-white">
-            <a
-              id="download_button"
-              href="Resume.pdf"
-              download="Resume.pdf"
-              >Download Resume</a>
+            <a id="download_button" href="Resume.pdf" download="Resume.pdf"
+              >Download Resume</a
+            >
           </div>
         </div>
       </div>
+
       <!-- Skills section-->
       <div class="skills mt-5">
         <h4
           id="skill-section"
           style="text-align: center; margin-bottom: 50px; font-size: 50px"
-          ;
         >
           Skills
         </h4>
-        <!-- Container for all the skills -->
-        <div class="row row-gap-3">
-          <!--smaller container within the skill section-->
-          <div class="list col">
-            <!-- Heading-->
-            <h5 style="text-align: center">Programming Languages</h5>
-            <!--container for unorder list -->
-            <div class="in-list">
-              <ul class="skill-list">
-                <li><i class="fa-brands fa-java"></i>Java</li>
-                <li><i class="fa-brands fa-python"></i>Python</li>
-              </ul>
-            </div>
-          </div>
-          <div class="list col">
-            <h5 style="text-align: center">Web Development</h5>
-            <div class="in-list">
-              <ul class="skill-list">
-                <li><i class="fa-brands fa-html5"></i> HTML & CSS</li>
-                <li><i class="fa-brands fa-js"></i>JavaScript</li>
-              </ul>
-            </div>
-          </div>
-          <div class="list col">
-            <h5 style="text-align: center">Tools and Technologies</h5>
-            <div class="in-list">
-              <ul class="skill-list">
-                <li><i class="fa-brands fa-git"></i>Git</li>
-                <li><i class="fa-brands fa-github"></i>GitHub</li>
-              </ul>
-            </div>
-          </div>
-          <div class="list col">
-            <h5 style="text-align: center">Cloud Technology</h5>
-            <div class="in-list">
-              <ul class="skill-list"
-                  <li> <i class="fa-solid fa-cloud"></i>Microsoft Azure</li>
-                <li><i class="fa-solid fa-database"></i>dbt (Data Build Tool)</li>
-                <li><i class="fa-solid fa-fire"></i>Databricks</li>
-                <li><i class="fa-brands fa-aws"></i>AWS</li>
-              </ul>
+
+          <!-- Container for all the skills -->
+          <div class="row row-gap-3">
+            <div class="list col">
+              <h5 style="text-align: center">Programming Languages</h5>
+              <div class="in-list">
+                <ul class="skill-list">
+                  <li><i class="fa-brands fa-python"></i>Python</li>
+                  <li><i class="fa-solid fa-database"></i>SQL</li>
+                  <li><i class="fa-brands fa-java"></i>Java</li>
+                </ul>
               </div>
+            </div>
+
+            <div class="list col">
+              <h5 style="text-align: center">Data & Analytics</h5>
+              <div class="in-list">
+                <ul class="skill-list">
+                  <li><i class="fa-solid fa-chart-line"></i>Tableau</li>
+                  <li><i class="fa-solid fa-table"></i>DuckDB</li>
+                  <li><i class="fa-solid fa-layer-group"></i>dbt</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="list col">
+              <h5 style="text-align: center">AI & Systems</h5>
+              <div class="in-list">
+                <ul class="skill-list">
+                  <li><i class="fa-solid fa-brain"></i>Agentic RAG</li>
+                  <li><i class="fa-solid fa-diagram-project"></i>LangGraph</li>
+                  <li><i class="fa-solid fa-robot"></i>LLM Pipelines</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="list col">
+              <h5 style="text-align: center">Cloud & Tooling</h5>
+              <div class="in-list">
+                <ul class="skill-list">
+                  <li><i class="fa-solid fa-fire"></i>Databricks</li>
+                  <li><i class="fa-brands fa-aws"></i>AWS</li>
+                  <li><i class="fa-brands fa-docker"></i>Docker</li>
+                  <li><i class="fa-solid fa-boxes-stacked"></i>Docker Compose</li>
+                  <li><i class="fa-brands fa-git"></i>Git & GitHub</li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
       </div>
     </div>
+
     <!--Footer container-->
-     <div class="pt-5 pb-5 mt-5 text-center footer">
+    <div class="pt-5 pb-5 mt-5 text-center footer">
       <footer>
-          <div class="social-icons mb-3">
-          <a href="https://github.com/pardeepwalia007/itec3020.github.io"
+        <div class="social-icons mb-3">
+          <a href="https://github.com/pardeepwalia007"
             ><i class="fa-brands fa-github"></i
           ></a>
           <a href="https://www.linkedin.com/in/pwalia11/"
             ><i class="fa-brands fa-linkedin"></i
           ></a>
-          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=wpardeep007@gmail.com&amp;su=Portfolio%20Inquiry" target="_blank" rel="noopener" aria-label="Email Pardeep">
+          <a
+            href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=wpardeep007@gmail.com&amp;su=Portfolio%20Inquiry"
+            target="_blank"
+            rel="noopener"
+            aria-label="Email Pardeep"
+          >
             <i class="fa-solid fa-envelope"></i>
           </a>
         </div>
         <p>&copy; <span id="current-year"></span> PW. All rights reserved.</p>
       </footer>
     </div>
+
     <script src="./script.js"></script>
+
     <script>
-      document.getElementById("current-year").textContent = new Date().getFullYear();
+      // Footer year
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // --- Typing effect for "A little Background about me!" ---
+      (function typingEffectAboutTitle() {
+        const titleEl = document.getElementById("about-title");
+        const textEl = document.getElementById("about-title-text");
+
+        if (!titleEl || !textEl) return;
+
+        const fullText = (textEl.textContent || "").trim();
+        const speedMs = 55; // tweak this if you want faster/slower
+        const startDelayMs = 200;
+
+        let i = 0;
+        titleEl.textContent = "";
+
+        setTimeout(() => {
+          const timer = setInterval(() => {
+            titleEl.textContent += fullText.charAt(i);
+            i++;
+
+            if (i >= fullText.length) {
+              clearInterval(timer);
+              // Optional: remove caret after finish
+              // titleEl.classList.remove("typing-caret");
+            }
+          }, speedMs);
+        }, startDelayMs);
+      })();
     </script>
   </body>
 </html>
